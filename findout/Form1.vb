@@ -1,9 +1,15 @@
 ﻿Imports System.Diagnostics.Eventing.Reader
 
 Public Class Form1
+
+
     Dim number As Integer
     Dim random As Decimal
+    Dim randomword As Double
     Dim number2 As Integer
+
+    Public Strfilename As String
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Picwheel.Visible = True
         Timermain.Enabled = True
@@ -89,7 +95,16 @@ Public Class Form1
         Me.Close()
     End Sub
 
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs)
+
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Label3.Text = "hello"
+        randomword
     End Sub
 End Class
