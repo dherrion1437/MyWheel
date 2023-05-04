@@ -34,9 +34,9 @@ Partial Class Form1
         'Picwheel
         '
         Me.Picwheel.Image = Global.findout.My.Resources.Resources.og1
-        Me.Picwheel.Location = New System.Drawing.Point(339, 109)
+        Me.Picwheel.Location = New System.Drawing.Point(323, 94)
         Me.Picwheel.Name = "Picwheel"
-        Me.Picwheel.Size = New System.Drawing.Size(425, 400)
+        Me.Picwheel.Size = New System.Drawing.Size(441, 415)
         Me.Picwheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Picwheel.TabIndex = 0
         Me.Picwheel.TabStop = False
