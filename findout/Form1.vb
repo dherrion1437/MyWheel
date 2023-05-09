@@ -206,4 +206,13 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub Btnguess_Click(sender As Object, e As EventArgs) Handles Btnguess.Click
+        Me.Visible = False
+        Form2.Visible = True
+    End Sub
+
+    Private Sub BtnA_Click(sender As Object, e As EventArgs) Handles BtnA.Click
+
+    End Sub
 End Class
