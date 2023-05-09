@@ -1,110 +1,209 @@
-﻿Imports System.Diagnostics.Eventing.Reader
+﻿
+Option Explicit On
+Option Infer Off
+Imports System.Diagnostics.Eventing.Reader
 
 Public Class Form1
-
-
+    Dim value As Integer
     Dim number As Integer
-    Dim random As Decimal
-    Dim randomword As Double
-    Dim number2 As Integer
+    Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
 
-    Public Strfilename As String
+        If Number = Value Then
+            EndImage()
+            Number = 0
+            Timer.Interval = 30
+            Timer.Enabled = False
+            Exit Sub
+        End If
+        number += 1
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Picwheel.Visible = True
-        Timermain.Enabled = True
-        random = Int((Rnd() * 7 + 1))
-        Button1.Text = random
-        number = 0
-        number2 = 0
-
-    End Sub
-
-    Private Sub Timermain_Tick(sender As Object, e As EventArgs) Handles Timermain.Tick
-        'Number += 1
-        number2 += 1
-
-        If number2 = 5 Then
+        If number Mod 25 = 0 Then
             Picwheel.Image = My.Resources.og1
-        ElseIf number2 = 10 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 1 Then
             Picwheel.Image = My.Resources._2
-        ElseIf number2 = 15 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 2 Then
             Picwheel.Image = My.Resources._3
-        ElseIf number2 = 20 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 3 Then
             Picwheel.Image = My.Resources._4
-        ElseIf number2 = 25 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 4 Then
             Picwheel.Image = My.Resources._5
-        ElseIf number2 = 30 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 5 Then
             Picwheel.Image = My.Resources._6
-        ElseIf number2 = 35 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 6 Then
             Picwheel.Image = My.Resources._7
-        ElseIf number2 = 40 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 7 Then
             Picwheel.Image = My.Resources._8
-        ElseIf number2 = 45 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 8 Then
             Picwheel.Image = My.Resources._9
-        ElseIf number2 = 50 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 9 Then
             Picwheel.Image = My.Resources._10
-        ElseIf number2 = 55 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 10 Then
             Picwheel.Image = My.Resources._11
-        ElseIf number2 = 60 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 11 Then
             Picwheel.Image = My.Resources._12
-        ElseIf number2 = 65 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 12 Then
             Picwheel.Image = My.Resources._13
-        ElseIf number2 = 70 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 13 Then
             Picwheel.Image = My.Resources._14
-        ElseIf number2 = 75 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 14 Then
             Picwheel.Image = My.Resources._15
-        ElseIf number2 = 80 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 15 Then
             Picwheel.Image = My.Resources._16
-        ElseIf number2 = 85 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 16 Then
             Picwheel.Image = My.Resources._17
-        ElseIf number2 = 90 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 17 Then
             Picwheel.Image = My.Resources._18
-        ElseIf number2 = 95 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 18 Then
             Picwheel.Image = My.Resources._19
-        ElseIf number2 = 100 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 19 Then
             Picwheel.Image = My.Resources._20
-        ElseIf number2 = 105 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 20 Then
             Picwheel.Image = My.Resources._21
-        ElseIf number2 = 110 Then
-            Picwheel.Image = My.Resources._21
-        ElseIf number2 = 115 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 21 Then
+            Picwheel.Image = My.Resources._22
+            SpinWheel()
+        ElseIf number Mod 25 = 22 Then
             Picwheel.Image = My.Resources._23
-        ElseIf number2 = 120 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 23 Then
             Picwheel.Image = My.Resources._24
-        ElseIf number2 = 125 Then
+            SpinWheel()
+        ElseIf number Mod 25 = 24 Then
             Picwheel.Image = My.Resources._25
-            number += 1
-            If number <> 25 Then
-                number2 = 0
-            End If
+            SpinWheel()
         End If
 
-
-
-
-
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        Timermain.Enabled = False
-        Button1.Text = "Spin"
+    Private Sub SpinWheel()
+        If number = Int(value / 2) Then
+            Timer.Interval = 50
+        ElseIf number = Int(value / 1.5) Then
+            Timer.Interval = 100
+        ElseIf number = Int(value / 1.25) Then
+            Timer.Interval = 200
+        ElseIf number = Int(value / 1.1) Then
+            Timer.Interval = 350
+        ElseIf number = value - 1 Then
+            Timer.Interval = 1000
+        End If
+    End Sub
+
+    Private Sub EndImage()
+        If number Mod 25 = 0 Then
+            Picwheel.Image = My.Resources.og1
+            lblbox.Text = "BANKRUPT"
+        ElseIf number Mod 25 = 1 Then
+            Picwheel.Image = My.Resources._2
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 2 Then
+            Picwheel.Image = My.Resources._3
+            lblbox.Text = "$2000"
+        ElseIf number Mod 25 = 3 Then
+            Picwheel.Image = My.Resources._4
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 4 Then
+            Picwheel.Image = My.Resources._5
+            lblbox.Text = "$5000"
+        ElseIf number Mod 25 = 5 Then
+            Picwheel.Image = My.Resources._6
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 6 Then
+            Picwheel.Image = My.Resources._7
+            lblbox.Text = "SKIP"
+        ElseIf number Mod 25 = 7 Then
+            Picwheel.Image = My.Resources._8
+            lblbox.Text = "$2000"
+        ElseIf number Mod 25 = 8 Then
+            Picwheel.Image = My.Resources._9
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 9 Then
+            Picwheel.Image = My.Resources._10
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 10 Then
+            Picwheel.Image = My.Resources._11
+            lblbox.Text = "$2000"
+        ElseIf number Mod 25 = 11 Then
+            Picwheel.Image = My.Resources._12
+            lblbox.Text = "BANKRUPT"
+        ElseIf number Mod 25 = 12 Then
+            Picwheel.Image = My.Resources._13
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 13 Then
+            Picwheel.Image = My.Resources._14
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 14 Then
+            Picwheel.Image = My.Resources._15
+            lblbox.Text = "10000"
+        ElseIf number Mod 25 = 15 Then
+            Picwheel.Image = My.Resources._16
+            lblbox.Text = "5000"
+        ElseIf number Mod 25 = 16 Then
+            Picwheel.Image = My.Resources._17
+            lblbox.Text = "SKIP"
+        ElseIf number Mod 25 = 17 Then
+            Picwheel.Image = My.Resources._18
+            lblbox.Text = "$2000"
+        ElseIf number Mod 25 = 18 Then
+            Picwheel.Image = My.Resources._19
+            lblbox.Text = "$5000"
+
+        ElseIf number Mod 25 = 19 Then
+            Picwheel.Image = My.Resources._20
+            lblbox.Text = "$2000"
+        ElseIf number Mod 25 = 20 Then
+            Picwheel.Image = My.Resources._21
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 21 Then
+            Picwheel.Image = My.Resources._22
+            lblbox.Text = "$1000"
+        ElseIf number Mod 25 = 22 Then
+            Picwheel.Image = My.Resources._23
+            lblbox.Text = "$2000"
+        ElseIf number Mod 25 = 23 Then
+            Picwheel.Image = My.Resources._24
+            lblbox.Text = "SKIP"
+        ElseIf number Mod 25 = 24 Then
+            Picwheel.Image = My.Resources._25
+            lblbox.Text = "$1000"
+        End If
+    End Sub
+
+    Private Sub button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        lblbox.Text = String.Empty
+        number = 0
+        Timer.Interval = 30
+        Randomize()
+        value = Int((Rnd() * 50) + 25)
+        Timer.Enabled = True
     End Sub
 
     Private Sub Btnexit_Click(sender As Object, e As EventArgs) Handles Btnexit.Click
         Me.Close()
     End Sub
 
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs)
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
-
-    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs)
-
-    End Sub
-
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        Label3.Text = "hello"
-        randomword
     End Sub
 End Class
