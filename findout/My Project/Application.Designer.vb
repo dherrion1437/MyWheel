@@ -32,9 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Sub OnCreateMainForm()
-            ' CType(Me.PerformanceCounter1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.MainForm = Global.findout.Form1
-
         End Sub
     End Class
 End Namespace

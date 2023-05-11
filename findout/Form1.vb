@@ -2,15 +2,22 @@
 Option Explicit On
 Option Infer Off
 Imports System.Diagnostics.Eventing.Reader
+Imports System.IO
+Imports LanguageExt.ClassInstances.Pred
 
 Public Class Form1
+    Public strFileName As String
+    Public Letters As Char
+    Dim strShortName As String
+    Dim Phrase As String
+    Dim Dash As String
     Dim value As Integer
     Dim number As Integer
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
 
-        If Number = Value Then
+        If number = value Then
             EndImage()
-            Number = 0
+            number = 0
             Timer.Interval = 30
             Timer.Enabled = False
             Exit Sub
@@ -190,7 +197,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub button1_Click(sender As Object, e As EventArgs) Handles Btnspin.Click
         lblbox.Text = String.Empty
         number = 0
         Timer.Interval = 30
@@ -205,14 +212,586 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        BtnA.Visible = False
+        BtnB.Visible = False
+        BtnC.Visible = False
+        BtnD.Visible = False
+        btnE.Visible = False
+        BtnF.Visible = False
+        BtnG.Visible = False
+        BtnH.Visible = False
+        BtnI.Visible = False
+        btnJ.Visible = False
+        Btnk.Visible = False
+        BtnL.Visible = False
+        btnm.Visible = False
+        btnn.Visible = False
+        Btno.Visible = False
+        Btnp.Visible = False
+        Btnq.Visible = False
+        Btnr.Visible = False
+        Btns.Visible = False
+        Btnt.Visible = False
+        Btnu.Visible = False
+        Btnv.Visible = False
+        Btnw.Visible = False
+        Btnx.Visible = False
+        Btny.Visible = False
+        btnz.Visible = False
+        Btnsolve.Visible = False
     End Sub
 
     Private Sub Btnguess_Click(sender As Object, e As EventArgs) Handles Btnguess.Click
-        Me.Visible = False
-        Form2.Visible = True
+        Picwheel.Visible = False
+        Btnspin.Visible = False
+        Btnguess.Visible = False
+        BtnA.Enabled = True
+        BtnB.Enabled = True
+        BtnC.Enabled = True
+        BtnD.Enabled = True
+        btnE.Enabled = True
+        BtnF.Enabled = True
+        BtnG.Enabled = True
+        BtnH.Enabled = True
+        BtnI.Enabled = True
+        btnJ.Enabled = True
+        Btnk.Enabled = True
+        BtnL.Enabled = True
+        btnm.Enabled = True
+        btnn.Enabled = True
+        Btno.Enabled = True
+        Btnp.Enabled = True
+        Btnq.Enabled = True
+        Btnr.Enabled = True
+        Btns.Enabled = True
+        Btnt.Enabled = True
+        Btnu.Enabled = True
+        Btnv.Enabled = True
+        Btnw.Enabled = True
+        Btnx.Enabled = True
+        Btny.Enabled = True
+        btnz.Enabled = True
+        lblPhrase.Visible = True
+        Txtsolve.Visible = True
+        BtnA.Visible = True
+        BtnB.Visible = True
+        BtnC.Visible = True
+        BtnD.Visible = True
+        btnE.Visible = True
+        BtnF.Visible = True
+        BtnG.Visible = True
+        BtnH.Visible = True
+        BtnI.Visible = True
+        btnJ.Visible = True
+        Btnk.Visible = True
+        BtnL.Visible = True
+        btnm.Visible = True
+        btnn.Visible = True
+        Btno.Visible = True
+        Btnp.Visible = True
+        Btnq.Visible = True
+        Btnr.Visible = True
+        Btns.Visible = True
+        Btnt.Visible = True
+        Btnu.Visible = True
+        Btnv.Visible = True
+        Btnw.Visible = True
+        Btnx.Visible = True
+        Btny.Visible = True
+        btnz.Visible = True
+        Btnsolve.Visible = True
+
     End Sub
 
-    Private Sub BtnA_Click(sender As Object, e As EventArgs) Handles BtnA.Click
+    Private Sub BtnA_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub NewGame()
+        lblPhrase.Text = String.Empty
+        BtnA.Enabled = True
+        BtnB.Enabled = True
+        BtnC.Enabled = True
+        BtnD.Enabled = True
+        btnE.Enabled = True
+        BtnF.Enabled = True
+        BtnG.Enabled = True
+        BtnH.Enabled = True
+        BtnI.Enabled = True
+        btnJ.Enabled = True
+        Btnk.Enabled = True
+        BtnL.Enabled = True
+        btnm.Enabled = True
+        btnn.Enabled = True
+        Btno.Enabled = True
+        Btnp.Enabled = True
+        Btnq.Enabled = True
+        Btnr.Enabled = True
+        Btns.Enabled = True
+        Btnt.Enabled = True
+        Btnu.Enabled = True
+        Btnv.Enabled = True
+        Btnw.Enabled = True
+        Btnx.Enabled = True
+        Btny.Enabled = True
+        btnz.Enabled = True
+
+
+
+    End Sub
+
+    Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
+
+        strFileName = String.Empty
+        Dim Open As New OpenFileDialog()
+        Dim myStreamReader As StreamReader
+        Open.Filter = "Text [*.txt*]|*.txt|All Files [*.*]|*.*"
+        Open.CheckFileExists = True
+        Open.Title = "OpenFile"
+        Open.ShowDialog(Me)
+        Try
+            strFileName = Open.FileName
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information)
+        End Try
+        myStreamReader = File.OpenText(Open.FileName)
+        Do Until myStreamReader.Peek = -1
+            ListBox1.Items.Add(myStreamReader.ReadLine())
+        Loop
+
+
+    End Sub
+
+    Private Sub Btnsolve_Click(sender As Object, e As EventArgs) Handles Btnsolve.Click
+
+    End Sub
+
+    Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
+
+        Dash = String.Empty
+        Phrase = String.Empty
+        lblbox.Text = String.Empty
+
+        Phrase = ListBox1.Items.Item(Int((ListBox1.Items.Count * Rnd())))
+        Phrase = Phrase.ToUpper()
+
+        For Each Letters In Phrase
+            If Letters <> " " Then
+                Dash = Dash + "-"
+            Else
+                Dash = Dash + " "
+            End If
+        Next
+        lblPhrase.Text = Dash
+    End Sub
+
+    Private Sub BtnA_Click_1(sender As Object, e As EventArgs) Handles BtnA.Click
+
+        If Phrase.Contains("A") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "A" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "A")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
+        If Phrase.Contains("B") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "B" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "B")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnC_Click(sender As Object, e As EventArgs) Handles BtnC.Click
+        If Phrase.Contains("C") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "C" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "C")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnD_Click(sender As Object, e As EventArgs) Handles BtnD.Click
+        If Phrase.Contains("D") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "D" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "D")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnE_Click(sender As Object, e As EventArgs) Handles btnE.Click
+        If Phrase.Contains("E") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "E" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "E")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnF_Click(sender As Object, e As EventArgs) Handles BtnF.Click
+        If Phrase.Contains("F") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "F" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "F")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnG_Click(sender As Object, e As EventArgs) Handles BtnG.Click
+        If Phrase.Contains("G") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "G" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "G")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnH_Click(sender As Object, e As EventArgs) Handles BtnH.Click
+        If Phrase.Contains("H") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "H" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "H")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnI_Click(sender As Object, e As EventArgs) Handles BtnI.Click
+        If Phrase.Contains("I") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "I" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "I")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnJ_Click(sender As Object, e As EventArgs) Handles btnJ.Click
+        If Phrase.Contains("J") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "J" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "J")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnK_Click(sender As Object, e As EventArgs) Handles Btnk.Click
+        If Phrase.Contains("K") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "K" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "K")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnL_Click(sender As Object, e As EventArgs) Handles BtnL.Click
+        If Phrase.Contains("L") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "L" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "L")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnM_Click_1(sender As Object, e As EventArgs) Handles btnm.Click
+
+        If Phrase.Contains("M") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "M" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "M")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnN_Click(sender As Object, e As EventArgs) Handles btnn.Click
+        If Phrase.Contains("N") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "N" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "N")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnO_Click(sender As Object, e As EventArgs) Handles Btno.Click
+        If Phrase.Contains("O") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "O" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "O")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnP_Click(sender As Object, e As EventArgs) Handles Btnp.Click
+        If Phrase.Contains("p") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "P" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "P")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub Btnq_Click(sender As Object, e As EventArgs) Handles Btnq.Click
+        If Phrase.Contains("B") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "q" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "q")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub Btnr_Click(sender As Object, e As EventArgs) Handles Btnr.Click
+        If Phrase.Contains("r") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "r" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "r")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub Btns_Click(sender As Object, e As EventArgs) Handles Btns.Click
+        If Phrase.Contains("s") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "s" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "s")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
+        If Phrase.Contains("B") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "B" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "B")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
+        If Phrase.Contains("B") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "B" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "B")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
+        If Phrase.Contains("B") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "B" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "B")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
+        If Phrase.Contains("B") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "B" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "B")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
+        If Phrase.Contains("B") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "B" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "B")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            BtnA.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            BtnA.BackColor = Color.Red
+        End If
     End Sub
 End Class
