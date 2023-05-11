@@ -66,6 +66,7 @@ Partial Class Form1
         Me.Txtsolve = New System.Windows.Forms.TextBox()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.lblPhrase = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PerformanceCounter1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.Picwheel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,10 +74,11 @@ Partial Class Form1
         '
         'Btnspin
         '
-        Me.Btnspin.Location = New System.Drawing.Point(531, 26)
+        Me.Btnspin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnspin.Location = New System.Drawing.Point(691, 81)
         Me.Btnspin.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnspin.Name = "Btnspin"
-        Me.Btnspin.Size = New System.Drawing.Size(83, 44)
+        Me.Btnspin.Size = New System.Drawing.Size(98, 44)
         Me.Btnspin.TabIndex = 1
         Me.Btnspin.Text = "Spin"
         Me.Btnspin.UseVisualStyleBackColor = True
@@ -109,9 +111,9 @@ Partial Class Form1
         '
         Me.lblbox.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblbox.Location = New System.Drawing.Point(531, 72)
+        Me.lblbox.Location = New System.Drawing.Point(691, 154)
         Me.lblbox.Name = "lblbox"
-        Me.lblbox.Size = New System.Drawing.Size(83, 103)
+        Me.lblbox.Size = New System.Drawing.Size(115, 36)
         Me.lblbox.TabIndex = 7
         '
         'ListBox1
@@ -148,7 +150,8 @@ Partial Class Form1
         '
         'Btnguess
         '
-        Me.Btnguess.Location = New System.Drawing.Point(618, 26)
+        Me.Btnguess.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnguess.Location = New System.Drawing.Point(850, 219)
         Me.Btnguess.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnguess.Name = "Btnguess"
         Me.Btnguess.Size = New System.Drawing.Size(97, 37)
@@ -159,17 +162,18 @@ Partial Class Form1
         'Picwheel
         '
         Me.Picwheel.Image = Global.findout.My.Resources.Resources.og1
-        Me.Picwheel.Location = New System.Drawing.Point(221, 26)
+        Me.Picwheel.Location = New System.Drawing.Point(326, 75)
         Me.Picwheel.Margin = New System.Windows.Forms.Padding(2)
         Me.Picwheel.Name = "Picwheel"
-        Me.Picwheel.Size = New System.Drawing.Size(306, 294)
+        Me.Picwheel.Size = New System.Drawing.Size(360, 325)
         Me.Picwheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Picwheel.TabIndex = 0
         Me.Picwheel.TabStop = False
         '
         'Btnsolve
         '
-        Me.Btnsolve.Location = New System.Drawing.Point(93, 59)
+        Me.Btnsolve.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnsolve.Location = New System.Drawing.Point(149, 60)
         Me.Btnsolve.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnsolve.Name = "Btnsolve"
         Me.Btnsolve.Size = New System.Drawing.Size(92, 40)
@@ -179,6 +183,7 @@ Partial Class Form1
         '
         'Btno
         '
+        Me.Btno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btno.Location = New System.Drawing.Point(149, 420)
         Me.Btno.Margin = New System.Windows.Forms.Padding(2)
         Me.Btno.Name = "Btno"
@@ -189,6 +194,7 @@ Partial Class Form1
         '
         'Btnp
         '
+        Me.Btnp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnp.Location = New System.Drawing.Point(218, 420)
         Me.Btnp.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnp.Name = "Btnp"
@@ -199,6 +205,7 @@ Partial Class Form1
         '
         'Btnq
         '
+        Me.Btnq.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnq.Location = New System.Drawing.Point(290, 420)
         Me.Btnq.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnq.Name = "Btnq"
@@ -209,6 +216,7 @@ Partial Class Form1
         '
         'Btnr
         '
+        Me.Btnr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnr.Location = New System.Drawing.Point(369, 420)
         Me.Btnr.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnr.Name = "Btnr"
@@ -219,6 +227,7 @@ Partial Class Form1
         '
         'Btns
         '
+        Me.Btns.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btns.Location = New System.Drawing.Point(445, 420)
         Me.Btns.Margin = New System.Windows.Forms.Padding(2)
         Me.Btns.Name = "Btns"
@@ -229,6 +238,7 @@ Partial Class Form1
         '
         'Btnt
         '
+        Me.Btnt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnt.Location = New System.Drawing.Point(514, 420)
         Me.Btnt.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnt.Name = "Btnt"
@@ -239,6 +249,7 @@ Partial Class Form1
         '
         'Btnu
         '
+        Me.Btnu.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnu.Location = New System.Drawing.Point(590, 420)
         Me.Btnu.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnu.Name = "Btnu"
@@ -249,6 +260,7 @@ Partial Class Form1
         '
         'Btnv
         '
+        Me.Btnv.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnv.Location = New System.Drawing.Point(652, 420)
         Me.Btnv.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnv.Name = "Btnv"
@@ -259,6 +271,7 @@ Partial Class Form1
         '
         'Btnw
         '
+        Me.Btnw.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnw.Location = New System.Drawing.Point(717, 420)
         Me.Btnw.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnw.Name = "Btnw"
@@ -269,6 +282,7 @@ Partial Class Form1
         '
         'Btnx
         '
+        Me.Btnx.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnx.Location = New System.Drawing.Point(784, 418)
         Me.Btnx.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnx.Name = "Btnx"
@@ -279,6 +293,7 @@ Partial Class Form1
         '
         'Btny
         '
+        Me.Btny.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btny.Location = New System.Drawing.Point(838, 418)
         Me.Btny.Margin = New System.Windows.Forms.Padding(2)
         Me.Btny.Name = "Btny"
@@ -289,6 +304,7 @@ Partial Class Form1
         '
         'btnz
         '
+        Me.btnz.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnz.Location = New System.Drawing.Point(897, 420)
         Me.btnz.Margin = New System.Windows.Forms.Padding(2)
         Me.btnz.Name = "btnz"
@@ -299,6 +315,7 @@ Partial Class Form1
         '
         'btnn
         '
+        Me.btnn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnn.Location = New System.Drawing.Point(81, 420)
         Me.btnn.Margin = New System.Windows.Forms.Padding(2)
         Me.btnn.Name = "btnn"
@@ -309,6 +326,7 @@ Partial Class Form1
         '
         'BtnB
         '
+        Me.BtnB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnB.Location = New System.Drawing.Point(149, 360)
         Me.BtnB.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnB.Name = "BtnB"
@@ -319,6 +337,7 @@ Partial Class Form1
         '
         'BtnC
         '
+        Me.BtnC.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnC.Location = New System.Drawing.Point(218, 360)
         Me.BtnC.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnC.Name = "BtnC"
@@ -329,6 +348,7 @@ Partial Class Form1
         '
         'BtnD
         '
+        Me.BtnD.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnD.Location = New System.Drawing.Point(290, 360)
         Me.BtnD.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnD.Name = "BtnD"
@@ -339,6 +359,7 @@ Partial Class Form1
         '
         'btnE
         '
+        Me.btnE.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnE.Location = New System.Drawing.Point(369, 360)
         Me.btnE.Margin = New System.Windows.Forms.Padding(2)
         Me.btnE.Name = "btnE"
@@ -349,6 +370,7 @@ Partial Class Form1
         '
         'BtnF
         '
+        Me.BtnF.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnF.Location = New System.Drawing.Point(445, 360)
         Me.BtnF.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnF.Name = "BtnF"
@@ -359,6 +381,7 @@ Partial Class Form1
         '
         'BtnG
         '
+        Me.BtnG.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnG.Location = New System.Drawing.Point(514, 360)
         Me.BtnG.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnG.Name = "BtnG"
@@ -369,6 +392,7 @@ Partial Class Form1
         '
         'BtnH
         '
+        Me.BtnH.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnH.Location = New System.Drawing.Point(590, 360)
         Me.BtnH.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnH.Name = "BtnH"
@@ -379,6 +403,7 @@ Partial Class Form1
         '
         'BtnI
         '
+        Me.BtnI.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnI.Location = New System.Drawing.Point(652, 360)
         Me.BtnI.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnI.Name = "BtnI"
@@ -389,6 +414,7 @@ Partial Class Form1
         '
         'btnJ
         '
+        Me.btnJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnJ.Location = New System.Drawing.Point(717, 360)
         Me.btnJ.Margin = New System.Windows.Forms.Padding(2)
         Me.btnJ.Name = "btnJ"
@@ -399,6 +425,7 @@ Partial Class Form1
         '
         'Btnk
         '
+        Me.Btnk.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnk.Location = New System.Drawing.Point(784, 358)
         Me.Btnk.Margin = New System.Windows.Forms.Padding(2)
         Me.Btnk.Name = "Btnk"
@@ -409,6 +436,7 @@ Partial Class Form1
         '
         'BtnL
         '
+        Me.BtnL.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnL.Location = New System.Drawing.Point(838, 358)
         Me.BtnL.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnL.Name = "BtnL"
@@ -419,6 +447,7 @@ Partial Class Form1
         '
         'btnm
         '
+        Me.btnm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnm.Location = New System.Drawing.Point(897, 360)
         Me.btnm.Margin = New System.Windows.Forms.Padding(2)
         Me.btnm.Name = "btnm"
@@ -429,6 +458,7 @@ Partial Class Form1
         '
         'BtnA
         '
+        Me.BtnA.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnA.Location = New System.Drawing.Point(81, 360)
         Me.BtnA.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnA.Name = "BtnA"
@@ -447,16 +477,17 @@ Partial Class Form1
         '
         'Txtsolve
         '
-        Me.Txtsolve.Location = New System.Drawing.Point(93, 105)
+        Me.Txtsolve.Location = New System.Drawing.Point(138, 105)
         Me.Txtsolve.Name = "Txtsolve"
         Me.Txtsolve.Size = New System.Drawing.Size(100, 20)
         Me.Txtsolve.TabIndex = 188
         '
         'btnNew
         '
+        Me.btnNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNew.Location = New System.Drawing.Point(732, 38)
         Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(75, 23)
+        Me.btnNew.Size = New System.Drawing.Size(102, 23)
         Me.btnNew.TabIndex = 189
         Me.btnNew.Text = "New Phrase"
         Me.btnNew.UseVisualStyleBackColor = True
@@ -464,10 +495,21 @@ Partial Class Form1
         'lblPhrase
         '
         Me.lblPhrase.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblPhrase.Location = New System.Drawing.Point(630, 212)
+        Me.lblPhrase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPhrase.Location = New System.Drawing.Point(169, 155)
         Me.lblPhrase.Name = "lblPhrase"
-        Me.lblPhrase.Size = New System.Drawing.Size(236, 83)
+        Me.lblPhrase.Size = New System.Drawing.Size(691, 167)
         Me.lblPhrase.TabIndex = 190
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(691, 138)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 16)
+        Me.Label1.TabIndex = 191
+        Me.Label1.Text = "Points"
         '
         'Form1
         '
@@ -475,6 +517,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1028, 519)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblPhrase)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.Txtsolve)
@@ -569,4 +612,5 @@ Partial Class Form1
     Friend WithEvents Txtsolve As TextBox
     Friend WithEvents btnNew As Button
     Friend WithEvents lblPhrase As Label
+    Friend WithEvents Label1 As Label
 End Class

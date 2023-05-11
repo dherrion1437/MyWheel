@@ -211,7 +211,8 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lblPhrase.Visible = False
+        Txtsolve.Visible = False
         BtnA.Visible = False
         BtnB.Visible = False
         BtnC.Visible = False
@@ -412,11 +413,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            BtnB.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            BtnB.BackColor = Color.Red
         End If
     End Sub
 
@@ -429,11 +430,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            BtnC.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            BtnC.BackColor = Color.Red
         End If
     End Sub
 
@@ -446,11 +447,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            BtnD.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            BtnD.BackColor = Color.Red
         End If
     End Sub
 
@@ -463,11 +464,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            btnE.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            btnE.BackColor = Color.Red
         End If
     End Sub
 
@@ -480,11 +481,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            BtnF.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            BtnF.BackColor = Color.Red
         End If
     End Sub
 
@@ -497,11 +498,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            BtnG.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            BtnG.BackColor = Color.Red
         End If
     End Sub
 
@@ -514,11 +515,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            BtnH.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            BtnH.BackColor = Color.Red
         End If
     End Sub
 
@@ -531,11 +532,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            BtnI.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            BtnI.BackColor = Color.Red
         End If
     End Sub
 
@@ -548,11 +549,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            btnJ.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            btnJ.BackColor = Color.Red
         End If
     End Sub
 
@@ -565,11 +566,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnk.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btnk.BackColor = Color.Red
         End If
     End Sub
 
@@ -582,11 +583,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            BtnL.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            BtnL.BackColor = Color.Red
         End If
     End Sub
 
@@ -600,11 +601,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnm.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            btnm.BackColor = Color.Red
         End If
     End Sub
 
@@ -617,11 +618,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            btnn.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            btnn.BackColor = Color.Red
         End If
     End Sub
 
@@ -634,11 +635,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btno.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btno.BackColor = Color.Red
         End If
     End Sub
 
@@ -651,16 +652,16 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnp.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btnp.BackColor = Color.Red
         End If
     End Sub
 
     Private Sub Btnq_Click(sender As Object, e As EventArgs) Handles Btnq.Click
-        If Phrase.Contains("B") Then
+        If Phrase.Contains("q") Then
             For letter As Integer = 0 To Phrase.Length - 1
                 If Phrase(letter) = "q" Then
                     Dash = Dash.Remove(letter, 1)
@@ -668,11 +669,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnq.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btnq.BackColor = Color.Red
         End If
     End Sub
 
@@ -685,11 +686,11 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnr.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btnr.BackColor = Color.Red
         End If
     End Sub
 
@@ -702,96 +703,134 @@ Public Class Form1
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btns.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btns.BackColor = Color.Red
         End If
     End Sub
 
-    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
-        If Phrase.Contains("B") Then
+    Private Sub Btnt_Click(sender As Object, e As EventArgs) Handles Btnt.Click
+        If Phrase.Contains("t") Then
             For letter As Integer = 0 To Phrase.Length - 1
-                If Phrase(letter) = "B" Then
+                If Phrase(letter) = "t" Then
                     Dash = Dash.Remove(letter, 1)
-                    Dash = Dash.Insert(letter, "B")
+                    Dash = Dash.Insert(letter, "t")
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnt.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btnt.BackColor = Color.Red
         End If
     End Sub
 
-    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
-        If Phrase.Contains("B") Then
+    Private Sub Btnu_Click(sender As Object, e As EventArgs) Handles Btnu.Click
+        If Phrase.Contains("u") Then
             For letter As Integer = 0 To Phrase.Length - 1
-                If Phrase(letter) = "B" Then
+                If Phrase(letter) = "u" Then
                     Dash = Dash.Remove(letter, 1)
-                    Dash = Dash.Insert(letter, "B")
+                    Dash = Dash.Insert(letter, "u")
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnu.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btnu.BackColor = Color.Red
         End If
     End Sub
 
-    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
-        If Phrase.Contains("B") Then
+    Private Sub Btnv_Click(sender As Object, e As EventArgs) Handles Btnv.Click
+        If Phrase.Contains("v") Then
             For letter As Integer = 0 To Phrase.Length - 1
-                If Phrase(letter) = "B" Then
+                If Phrase(letter) = "v" Then
                     Dash = Dash.Remove(letter, 1)
-                    Dash = Dash.Insert(letter, "B")
+                    Dash = Dash.Insert(letter, "v")
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnv.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btnv.BackColor = Color.Red
         End If
     End Sub
 
-    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
-        If Phrase.Contains("B") Then
+    Private Sub Btnw_Click(sender As Object, e As EventArgs) Handles Btnw.Click
+        If Phrase.Contains("w") Then
             For letter As Integer = 0 To Phrase.Length - 1
-                If Phrase(letter) = "B" Then
+                If Phrase(letter) = "w" Then
                     Dash = Dash.Remove(letter, 1)
-                    Dash = Dash.Insert(letter, "B")
+                    Dash = Dash.Insert(letter, "w")
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btnw.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btnw.BackColor = Color.Red
         End If
     End Sub
 
-    Private Sub BtnB_Click(sender As Object, e As EventArgs) Handles BtnB.Click
-        If Phrase.Contains("B") Then
+    Private Sub Btnx_Click(sender As Object, e As EventArgs) Handles Btnx.Click
+        If Phrase.Contains("x") Then
             For letter As Integer = 0 To Phrase.Length - 1
-                If Phrase(letter) = "B" Then
+                If Phrase(letter) = "x" Then
                     Dash = Dash.Remove(letter, 1)
-                    Dash = Dash.Insert(letter, "B")
+                    Dash = Dash.Insert(letter, "x")
                 End If
             Next letter
             lblPhrase.Text = Dash
-            BtnA.BackColor = Color.Green
+            Btny.BackColor = Color.Green
 
         Else
             MsgBox("Try Again")
-            BtnA.BackColor = Color.Red
+            Btny.BackColor = Color.Red
         End If
+    End Sub
+
+    Private Sub Btny_Click(sender As Object, e As EventArgs) Handles Btny.Click
+        If Phrase.Contains("y") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "y" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "y")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            Btny.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            Btny.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub Btnz_Click(sender As Object, e As EventArgs) Handles btnz.Click
+        If Phrase.Contains("z") Then
+            For letter As Integer = 0 To Phrase.Length - 1
+                If Phrase(letter) = "z" Then
+                    Dash = Dash.Remove(letter, 1)
+                    Dash = Dash.Insert(letter, "z")
+                End If
+            Next letter
+            lblPhrase.Text = Dash
+            btnz.BackColor = Color.Green
+
+        Else
+            MsgBox("Try Again")
+            btnz.BackColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub lblPhrase_Click(sender As Object, e As EventArgs) Handles lblPhrase.Click
+
     End Sub
 End Class
